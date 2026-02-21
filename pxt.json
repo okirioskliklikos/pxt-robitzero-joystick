@@ -15,7 +15,7 @@
         "custom.ts",
         "library.ts",
         "_locales/en/pxt-robitzero-joystick-strings.json",
-        "_localed/el/pxt-robitzero-joystick-strings.json"
+        "_locales/el/pxt-robitzero-joystick-strings.json"
     ],
     "testFiles": [
         "test.ts"
