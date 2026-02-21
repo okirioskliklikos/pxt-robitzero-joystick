@@ -1,0 +1,7 @@
+{
+  "rb0joystick": "Functions to use a five button joystick with different colors for its buttons\n*      B\nG       Y    B\nR",
+  "rb0joystick.initAdvanced": "Initialize Joystick",
+  "rb0joystick.initAdvanced|param|pin1": "pin where the joystick is connected",
+  "rb0joystick.initSimple": "Initialize Joystick",
+  "rb0joystick.initSimple|param|port": "Keyestudio port where the joystick is connected"
+}
