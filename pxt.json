@@ -1,6 +1,6 @@
 {
     "name": "pxt-robitzero-joystick",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -13,7 +13,9 @@
         "main.blocks",
         "main.ts",
         "custom.ts",
-        "library.ts"
+        "library.ts",
+        "_locales/en/pxt-robitzero-joystick-strings.json",
+        "_localed/el/pxt-robitzero-joystick-strings.json"
     ],
     "testFiles": [
         "test.ts"

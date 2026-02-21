@@ -1,0 +1,13 @@
+{
+  "JoystickButton.Black|block": "black",
+  "JoystickButton.Blue|block": "blue",
+  "JoystickButton.Green|block": "green",
+  "JoystickButton.Red|block": "red",
+  "JoystickButton.Yellow|block": "yellow",
+  "rb0joystick.initAdvanced|block": "joystick at pin %pin2",
+  "rb0joystick.initSimple|block": "joystick at port %port",
+  "rb0joystick.onButtonPressed|block": "on joystick button %button pressed",
+  "rb0joystick|block": "Joystick",
+  "{id:category}Rb0joystick": "Rb0joystick",
+  "{id:group}Input": "Input"
+}

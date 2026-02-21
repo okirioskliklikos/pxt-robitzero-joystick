@@ -1,0 +1,13 @@
+{
+  "JoystickButton.Black|block": "μαύρο",
+  "JoystickButton.Blue|block": "μπλε",
+  "JoystickButton.Green|block": "πράσινο",
+  "JoystickButton.Red|block": "κόκκινο",
+  "JoystickButton.Yellow|block": "κίτρινο",
+  "rb0joystick.initAdvanced|block": "χειριστήριο στον ακροδέκτη %pin2",
+  "rb0joystick.initSimple|block": "χειριστήριο στην θύρα %port",
+  "rb0joystick.onButtonPressed|block": "όταν πιεστεί το %button κουμπί",
+  "rb0joystick|block": "Χειριστήριο",
+  "{id:category}Rb0joystick": "Rb0joystick",
+  "{id:group}Input": "Είσοδος"
+}
