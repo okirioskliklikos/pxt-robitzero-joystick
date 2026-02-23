@@ -20,7 +20,7 @@ enum JoystickButton {
  */
 //% block="Joystick"
 //% groups=['Input']
-//% weight=7 color=#ff6f00 icon="\uf0a9"
+//% weight=10 color=#ff6f00 icon="\uf0a9"
 namespace rb0joystick {
 
     const EVENT_ID = 0x8100
