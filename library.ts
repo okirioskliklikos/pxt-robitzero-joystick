@@ -104,7 +104,7 @@ namespace rb0joystick {
     //% weight=90 color=100 blockGap=24
     //% port.defl=KeyestudioPort.P0
     export function initSimple(port: KeyestudioAnalogPort) {
-        let pin1 = rb0base.getPinFromKeyestudioPort(port);
+        let pin1 = rb0base.getPinFromKeyestudioAnalogPort(port);
         adjustToPin(pin1);
 
         rb0base.enablePin(pin1);
@@ -119,10 +119,11 @@ namespace rb0joystick {
     //% block="joystick at pin %pin2" 
     //% weight=90 color=100 blockGap=24 advanced=true
     //% pin1.defl=DigitalPin.P0
-    export function initAdvanced(pin1: DigitalPin) {
-        adjustToPin(pin1);
-        rb0base.enablePin(pin1);
-        inputPin = pin1;
+    export function initAdvanced(pin1: AnalogPin) {
+        let p = pin1 as number;
+        adjustToPin(p);
+        rb0base.enablePin(p);
+        inputPin = p;
     }
 
     //% blockId="rb0joystick_onbuttonpressed"
