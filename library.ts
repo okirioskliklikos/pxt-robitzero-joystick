@@ -103,7 +103,7 @@ namespace rb0joystick {
     //% block="joystick at port %port" 
     //% weight=90 color=100 blockGap=24
     //% port.defl=KeyestudioPort.P0
-    export function initSimple(port: KeyestudioPort) {
+    export function initSimple(port: KeyestudioAnalogPort) {
         let pin1 = rb0base.getPinFromKeyestudioPort(port);
         adjustToPin(pin1);
 
