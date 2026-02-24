@@ -24,20 +24,29 @@ enum JoystickButton {
 namespace rb0joystick {
 
     const EVENT_ID = 0x8100
-    const IDLE_MIN = 480
-    const IDLE_MAX = 510
+    let IDLE_MIN = 480
+    let IDLE_MAX = 510
 
     let inputPin: DigitalPin = DigitalPin.P0
     let lastButton = 0
     let started = false
 
-    // Default voltage ranges
+    //Default values for P0
     let ranges = [
         { btn: JoystickButton.Red, min: 230, max: 290 },
         { btn: JoystickButton.Green, min: 0, max: 60 },
         { btn: JoystickButton.Blue, min: 116, max: 166 },
         { btn: JoystickButton.Yellow, min: 330, max: 390 },
         { btn: JoystickButton.Black, min: 420, max: 470 }
+    ]
+
+    //Values for other ports except P0
+    let rangesP1P10 = [
+        { btn: JoystickButton.Red, min: 290, max: 330 },
+        { btn: JoystickButton.Green, min: 0, max: 60 },
+        { btn: JoystickButton.Blue, min: 120, max: 180 },
+        { btn: JoystickButton.Yellow, min: 465, max: 510 },
+        { btn: JoystickButton.Black, min: 755, max: 810 }
     ]
 
     function start() {
@@ -75,6 +84,15 @@ namespace rb0joystick {
         return 0;
     }
 
+    function adjustToPin(pin1: DigitalPin) {
+        if (pin1 !== DigitalPin.P0) {
+            ranges = rangesP1P10;
+        }
+
+        IDLE_MIN = 1000;
+        IDLE_MAX = 1023;
+    }
+
     /// Public API ///
 
     /**
@@ -87,6 +105,8 @@ namespace rb0joystick {
     //% port.defl=KeyestudioPort.P0
     export function initSimple(port: KeyestudioPort) {
         let pin1 = rb0base.getPinFromKeyestudioPort(port);
+        adjustToPin(pin1);
+
         rb0base.enablePin(pin1);
         inputPin = pin1;
     }
@@ -100,6 +120,7 @@ namespace rb0joystick {
     //% weight=90 color=100 blockGap=24 advanced=true
     //% pin1.defl=DigitalPin.P0
     export function initAdvanced(pin1: DigitalPin) {
+        adjustToPin(pin1);
         rb0base.enablePin(pin1);
         inputPin = pin1;
     }
