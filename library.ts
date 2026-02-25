@@ -87,10 +87,10 @@ namespace rb0joystick {
     function adjustToPin(pin1: DigitalPin) {
         if (pin1 !== DigitalPin.P0) {
             ranges = rangesP1P10;
-        }
 
-        IDLE_MIN = 1000;
-        IDLE_MAX = 1023;
+            IDLE_MIN = 1000;
+            IDLE_MAX = 1023;
+        }
     }
 
     /// Public API ///
