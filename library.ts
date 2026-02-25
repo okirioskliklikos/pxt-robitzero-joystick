@@ -123,11 +123,12 @@ namespace rb0joystick {
     * Initialize Joystick
     * @param pin1 pin where the joystick is connected
     */
-    //% blockId="rb0keypa5d_initAdvanced"
-    //% block="joystick at pin %pin2" 
+    //% blockId="rb0joystick_initAdvanced"
+    //% block="joystick at pin %pin1" 
     //% weight=90 color=100 blockGap=24 advanced=true
-    //% pin1.defl=DigitalPin.P0
-    export function initAdvanced(pin1: AnalogPin) {
+    //% pin1.fieldEditor=pinpicker
+    //% pin1.defl=AnalogReadWritePin.P0
+    export function initAdvanced(pin1: AnalogReadWritePin) {
         let p = pin1 as number;
         adjustToPin(p);
         rb0base.enablePin(p);
