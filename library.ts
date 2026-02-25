@@ -17,6 +17,14 @@ enum JoystickButton {
  *      B
  *  G       Y    B
  *      R
+ * 
+ * -----------------------
+ * IMPORTANT: Keyestudio Microbit BaseShield v1.0 does not provide the same current at analog port P0
+ *            and the others exposed analog ports/pins such as P1,P2,P10. This is why for analog sensors
+ *            a separate/double logic is used in order for the analogue sensors to return almost identical
+ *            values to the students. The students should not consider in which analog port (red ports in Keyestudio baseshields)
+ *            connect their sensors. The students should just connect their analog sensors in red ports and they should just work.
+ *
  */
 //% block="Joystick"
 //% groups=['Input']
