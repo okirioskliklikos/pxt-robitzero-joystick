@@ -1,12 +1,12 @@
 {
     "name": "pxt-robitzero-joystick",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-robitzero-base": "github:okirioskliklikos/pxt-robitzero-base#v0.2.1"
+        "pxt-robitzero-base": "github:okirioskliklikos/pxt-robitzero-base"
     },
     "files": [
         "README.md",
